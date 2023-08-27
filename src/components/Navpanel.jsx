@@ -10,7 +10,7 @@ export default function Navpanel() {
         <div className='navPanel-content'>
             <ul>
                 <li><Link to='about'>About us</Link> </li>
-                <li><Link to='plant'>Plants </Link> </li>
+                <li><Link to='plant'>Buy plants! </Link> </li>
                 <li><Link to='advice'>Useful information </Link> </li>
                 <li><Link to='consultation'>Consultations </Link></li>
                 <li><Link to='contact'>Contacts and Feedbacks </Link></li>

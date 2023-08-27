@@ -66,6 +66,16 @@
     font-weight: 700;
 }
 
-.sort-name {
+.sort-plant {
     margin-left: 12px;
+    cursor: grab;
+}
+
+.sorted {
+    margin-left: 12px;
+    font-size: 15px;
+    font-weight: 900;
+    text-decoration: underline;
+    cursor: grab;
+
 }

@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Pagination from './Pagination';
 import BasketModal from './BasketModal';
 import '../assets/styles/table.css';
-// import plant1 from '../assets/images/plant1.jpg';
+
+// (cityData.sort((d1, d2) => new Date(d1.datestart) - new Date(d2.datestart)))
+// {cityData.some((cityItem) => cityItem.cityName === props.searchingCity) ? <CityCard cityData={cityData.filter(el => el.cityName === props.searchingCity)} handleEditProp={handleEdit} /> : <CityCard cityData={(cityData.sort((d1, d2) => new Date(d1.datestart) - new Date(d2.datestart))).slice(scrollPosition, 3)} handleEditProp={handleEdit} handleScrollProp={handleScroll} handleScrollLeftProp={handleScrollLeft} error='Error' scrollLeftdisabled={scrollLeftdisabled} scrolldisabled={scrolldisabled} />}</div>}
+
 
 
 export default function Table() {
@@ -13,13 +16,17 @@ export default function Table() {
     const indexOfFirstRecord = indexOfLastRecord - recordsPerPage;
     const [numberOFgoods, setNumberOFgoods] = useState(0);
     const [BasketModalVisibility, setBasketModalVisibility] = useState(false);
+    const [sortPriceClass, setsortPriceClass] = useState('sort-plant');
+    const [sortNameClass, setsortNameClass] = useState('sort-plant');
+
     const [basket, setBasket] = useState([]);
+    const [searchingPlant, setSearchingPlant] = useState(null);
+
     const [choosingPlant, setchoosingPlant] = useState({
         "photo": "",
         "plantName": "",
         "price": ""
     });
-
 
     useEffect(() => {
         fetch('http://localhost:3000/plants')
@@ -28,6 +35,27 @@ export default function Table() {
     }, []);
     const nPages = Math.ceil((plantdata.length) / recordsPerPage);
 
+    function submitSearch(event) {
+        event.preventDefault();
+        if (plantdata.some((plantItem) => plantItem.plantName === searchingPlant)) {
+            setplantData(plantdata.filter(el => el.plantName === searchingPlant))
+        }
+        else {
+            window.alert('Unfortunately we havent got such a plant for now');
+        }
+    }
+
+    function sortPrice() {
+        setsortPriceClass('sorted');
+        setsortNameClass('sort-plant');
+        setplantData(plantdata.sort((price1, price2) => price1.price - price2.price))
+    }
+
+    function sortName() {
+        setsortNameClass('sorted')
+        setsortPriceClass('sort-plant');
+        setplantData(plantdata.sort((name1, name2) => (name1.plantName > name2.plantName) ? 1 : ((name1.plantName < name2.plantName) ? -1 : 0)));
+    }
 
     if (plantdata) {
         return (
@@ -39,8 +67,8 @@ export default function Table() {
 
                     </div>
                     <div className='table-search'>
-                        <form >
-                            <input
+                        <form onSubmit={submitSearch}>
+                            <input onChange={(e) => setSearchingPlant(e.target.value)}
                                 className="table-search-input"
                                 type="search"
                                 placeholder="Search for a plant"
@@ -48,7 +76,7 @@ export default function Table() {
                             <input className="table-search-btn" type="submit" value="🌸 GO 🌸" />
                         </form>
                         <div className='table-sort'>
-                            <p className='table-sort'><span className='sort-price'>By price</span>    <span className='sort-name'>By name</span></p>
+                            <p className='table-sort'><span onClick={sortPrice} className={sortPriceClass}>By price</span>    <span onClick={sortName} className={sortNameClass}>By name</span></p>
                         </div>
                     </div>
 
