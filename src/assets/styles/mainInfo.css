@@ -1,0 +1,16 @@
+.header-content-head {
+    text-align: center;
+    font-size: 30px;
+}
+
+.header-content-text {
+    text-indent: 20px;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 1px;
+}
+
+.header-content-span {
+    color: rgb(9, 89, 44);
+    font-weight: 800;
+}

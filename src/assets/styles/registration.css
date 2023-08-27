@@ -1,0 +1,14 @@
+.inputEqualWidth {
+    width: 250px;
+    padding: 5px;
+    margin-left: 15px;
+    border-radius: 2px;
+}
+
+.redBorder {
+    border: 2px solid red;
+    width: 250px;
+    padding: 5px;
+    margin-left: 15px;
+    border-radius: 2px;
+}

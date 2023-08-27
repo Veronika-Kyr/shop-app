@@ -1,0 +1,71 @@
+.table-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.table-plantPhoto {
+    width: 100px;
+    height: 100px;
+}
+
+.tableCart {
+    cursor: grab;
+}
+
+.btnCart {
+    padding: 7px 9px;
+    border: none;
+    border-radius: 3px;
+    background: rgba(184, 239, 133, 0.893);
+    color: rgb(9, 89, 44);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.table-cart {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.table-search-btn {
+    margin-left: 15px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    border: none;
+    background: rgba(184, 239, 133, 0.893);
+    color: rgb(9, 89, 44);
+    cursor: grab;
+}
+
+.table-search-btn:hover {
+    font-size: 16px;
+    color: aliceblue;
+    font-weight: 900;
+}
+
+.table-search-input {
+    padding: 8px 10px;
+    border-radius: 3px;
+}
+
+.basketModal {
+    position: absolute;
+    top: 25%vh;
+    left: 25%vh;
+    padding: 20px;
+    width: 500px;
+    min-height: 200px;
+    border-radius: 5px;
+    background: white;
+}
+
+.table-sort {
+    font-weight: 700;
+}
+
+.sort-name {
+    margin-left: 12px;
+}
