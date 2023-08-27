@@ -18,7 +18,6 @@ export default function Table() {
     const [BasketModalVisibility, setBasketModalVisibility] = useState(false);
     const [sortPriceClass, setsortPriceClass] = useState('sort-plant');
     const [sortNameClass, setsortNameClass] = useState('sort-plant');
-
     const [basket, setBasket] = useState([]);
     const [searchingPlant, setSearchingPlant] = useState(null);
 
@@ -84,7 +83,7 @@ export default function Table() {
                     {BasketModalVisibility && <div className='basketModal'>
                         <button className="closeButton" onClick={() => { setBasketModalVisibility(false) }}>✖</button>
                         <hr />
-                        <BasketModal basket={basket} />
+                        <BasketModal basket={basket} setBasketModalVisibility={setBasketModalVisibility} />
                     </div>}
                 </>
                 <div className='table-content-plants'>

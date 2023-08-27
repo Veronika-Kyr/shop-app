@@ -10,14 +10,14 @@ export default function Registration(props) {
     const [disabledBtn, setdisabledBtn] = useState(true);
 
     const [formState, setFormState] = useState({
-        idOrder: '',
+        id: '',
         firstName: '',
         lastName: '',
         city: '',
         department: '',
         email: '',
         phoneNumber: '',
-        order: [props.basket]
+        order: [...props.basket]
         //  id: '',
         //  plantName: '',
         //  sorttName: '',
@@ -34,34 +34,31 @@ export default function Registration(props) {
     useEffect(() => {
         if (!clickedSubBTN) return;
         setdisabledBtn(true);
-
         fetch('http://localhost:3000/orders', {
-
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ formState })
+            body: JSON.stringify(formState)
         })
-            .then((resp) => resp.json())
-            .then((data) => {
-                if (data.error) {
-                    // window.alert(data.error);
-                    setclickedSubBTN(false);
+        //  .then((resp) => {
+        //(resp) =>     resp.json();
+        //  .then((data) => {
+        // if (data.error) {
+        // window.alert(data.error);
+        //  setclickedSubBTN(false);
+        //   throw Error();
 
-                    throw Error();
-                }
-                else {
-                    // subscribeView();
-                    window.alert('Your order has registrated. You will receive a confirmation email soon!')
-                    console.log(data);
-                }
-            })
-            .catch(error => {
-                console.log(error);
-                //  unsubscribeView();
-                setclickedSubBTN(false);
-            })
+        window.alert('Your order has registrated. You will receive a confirmation email soon!');
+        props.setRegistrationVisibility(false);
+        props.setBasketModalVisibilityProp(false);
+        console.log(formState);
+        //  })
+        // .catch(error => {
+        //  console.log(error);
+        //  unsubscribeView();
+        //   setclickedSubBTN(false);
+        //   })
     }, [clickedSubBTN]);
 
 
@@ -103,13 +100,13 @@ export default function Registration(props) {
 
     function handleCity(event) {
 
-        changeState(event.target.value, 'age');
+        changeState(event.target.value, 'city');
         //  setageclassName('inputEqualWidth');
 
     }
     function handleDepartment(event) {
 
-        changeState(event.target.value, 'age');
+        changeState(event.target.value, 'department');
         //     setageclassName('inputEqualWidth');
 
     }
@@ -155,15 +152,15 @@ export default function Registration(props) {
                         <input id="phone" type="tel" className={phoneNumberclassName} onChange={handlephoneNumber} placeholder='0991112233' pattern="[0-9]{10}" />
                     </div>
                     <div className="form-items">  <label htmlFor="city"> City</label>
-                        <input id="age" type="text" className='inputEqualWidth' onChange={handleCity} placeholder='City' />
+                        <input id="city" type="text" className='inputEqualWidth' onChange={handleCity} placeholder='City' />
                     </div>
                     <div className="form-items">  <label htmlFor="department"> Department*</label>
-                        <input id="age" type="text" className='inputEqualWidth' onChange={handleDepartment} placeholder='Nova Poshta Department' />
-                        <p>* Delivery upon Nova Poshta tariffs <a href='https://novaposhta.ua/delivery' rel="noreferrer" target="_blank" title='Go to Nova Poshta'><img src={logoNP} alt='logo of Nova Poshta' /></a>  </p>
+                        <input id="department" type="text" className='inputEqualWidth' onChange={handleDepartment} placeholder='Nova Poshta Department' />
+                        <p>* Delivery upon Nova Poshta's tariffs <a href='https://novaposhta.ua/delivery' rel="noreferrer" target="_blank" title='Go to Nova Poshta'><img src={logoNP} alt='logo of Nova Poshta' /></a>  </p>
                     </div>
 
                     <div className="form-items">
-                        <button className="btnSubmit" type="submit" disabled={disabledBtn} onClick={(e) => { e.preventDefault(); setclickedSubBTN(true); }} ><Link to='plant'>Confirm</Link></button>
+                        <button className="btnSubmit" type="submit" disabled={disabledBtn} onClick={(e) => { e.preventDefault(); setclickedSubBTN(true); }} >Confirm</button>
                     </div>
 
                 </form >

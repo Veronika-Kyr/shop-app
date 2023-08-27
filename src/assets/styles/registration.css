@@ -12,3 +12,14 @@
     margin-left: 15px;
     border-radius: 2px;
 }
+
+.btnSubmit {
+    padding: 7px 9px;
+    border: none;
+    border-radius: 3px;
+    background: rgba(184, 239, 133, 0.893);
+    color: rgb(9, 89, 44);
+    font-size: 18px;
+    font-weight: 700;
+    cursor: grab;
+}

@@ -273,7 +273,7 @@
     ],
     "orders": [
         {
-            "idOrder": "1000",
+            "id": "1000",
             "city": "Irpin",
             "firstName": "Olena",
             "lastName": "Komar",

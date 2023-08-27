@@ -23,4 +23,10 @@
     color: rgb(9, 89, 44);
     font-size: 18px;
     font-weight: 700;
+    cursor: grab;
+}
+
+.cartContent-total {
+    display: flex;
+    justify-content: end;
 }
