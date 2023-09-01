@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 export default function BasketModal(props) {
     const [registrationVisibility, setRegistrationVisibility] = useState(false);
     const setBasketModalVisibilityProp = props.setBasketModalVisibility;
+    const setNumberOFgoodsProp = props.setNumberOFgoods;
 
 
     function sumTotal(arr) {
@@ -32,7 +33,7 @@ export default function BasketModal(props) {
 
                 <button className='cartBtn' onClick={() => setRegistrationVisibility(true)}>Checkout</button>
                 {registrationVisibility && <div className='registration'>
-                    <Registration basket={props.basket} setBasketModalVisibilityProp={setBasketModalVisibilityProp} setRegistrationVisibility={setRegistrationVisibility} />
+                    <Registration basket={props.basket} setBasketModalVisibilityProp={setBasketModalVisibilityProp} setRegistrationVisibility={setRegistrationVisibility} setNumberOFgoodsProp={setNumberOFgoodsProp} />
                 </div>}
             </div>
         </div>

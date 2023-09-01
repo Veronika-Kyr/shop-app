@@ -1,0 +1,265 @@
+.animated-head {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.animaFlowerF,
+.animaFlowerS,
+.animaFlowerT,
+.animaFlowerFo,
+.animaFlowerFi,
+.animaFlowerSi,
+.animaFlowerSe,
+.animaFlowerE,
+.animaFlowerN,
+.animaFlowerTe,
+.animaFlowerEl,
+.animaFlowerTw {
+    opacity: 0;
+    width: 0;
+    position: relative;
+    left: -1.8rem;
+    background: rgba(184, 239, 133, 0.893);
+}
+
+
+/*.animaLetterF,
+.animaLetterS,
+.animaLetterT,
+.animaLetterFo,
+.animaLetterFi,
+.animaLetterSi,
+.animaLetterSe,
+.animaLetterE,
+.animaLetterN,
+.animaLetterTe,
+.animaLetterEl,
+.animaLetterTw {
+    
+}*/
+
+/*Animation for flowers*/
+
+.animaFlowerF {
+    animation-name: flowerAppear;
+    animation-duration: 3.5s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    /* animation-fill-mode: backwards;*/
+}
+
+.animaFlowerS {
+    animation-name: flowerAppear;
+    animation-duration: 3.5s;
+    animation-delay: 3.2s;
+    animation-iteration-count: infinite;
+    /*  animation-fill-mode: backwards;*/
+
+}
+
+.animaFlowerT {
+    animation-name: flowerAppear;
+    animation-duration: 3.5s;
+    animation-delay: 3.4s;
+    animation-iteration-count: infinite;
+    /*  animation-fill-mode: backwards;*/
+
+}
+
+.animaFlowerFo {
+    animation-name: flowerAppear;
+    animation-duration: 3.5s;
+    animation-delay: 3.6s;
+    animation-iteration-count: infinite;
+    /*   animation-fill-mode: backwards;*/
+
+}
+
+.animaFlowerFi {
+    animation-name: flowerAppear;
+    animation-duration: 3.5s;
+    animation-delay: 3.8s;
+    animation-iteration-count: infinite;
+    /*  animation-fill-mode: backwards;*/
+
+}
+
+.animaFlowerSi {
+    animation-name: flowerAppear;
+    animation-duration: 3.5s;
+    animation-delay: 4s;
+    animation-iteration-count: infinite;
+    /*  animation-fill-mode: backwards;*/
+
+}
+
+.animaFlowerSe {
+    animation-name: flowerAppear;
+    animation-duration: 3.5s;
+    animation-delay: 4.2s;
+    animation-iteration-count: infinite;
+    /* animation-fill-mode: backwards;*/
+
+}
+
+.animaFlowerE {
+    animation-name: flowerAppear;
+    animation-duration: 3.5s;
+    animation-delay: 4.4s;
+    animation-iteration-count: infinite;
+    /*   animation-fill-mode: backwards;*/
+
+}
+
+.animaFlowerN {
+    animation-name: flowerAppear;
+    animation-duration: 3.5s;
+    animation-delay: 4.6s;
+    animation-iteration-count: infinite;
+    /*  animation-fill-mode: backwards;*/
+
+}
+
+.animaFlowerTe {
+    animation-name: flowerAppear;
+    animation-duration: 3.5s;
+    animation-delay: 4.8s;
+    animation-iteration-count: infinite;
+    /*   animation-fill-mode: backwards;*/
+
+}
+
+.animaFlowerEl {
+    animation-name: flowerAppear;
+    animation-duration: 3.5s;
+    animation-delay: 5s;
+    animation-iteration-count: infinite;
+    /*  animation-fill-mode: backwards;*/
+
+}
+
+.animaFlowerTw {
+    animation-name: flowerAppear;
+    animation-duration: 3.5s;
+    animation-delay: 5.2s;
+    animation-iteration-count: infinite;
+    /*  animation-fill-mode: backwards;*/
+
+}
+
+
+/* Animation for letters*/
+/*
+.animaLetterF {
+    animation-name: letterHide;
+    animation-duration: 3.4s;
+    animation-delay: 1.2s;
+    animation-iteration-count: infinite;
+}
+
+.animaLetterS {
+    animation-name: letterHide;
+    animation-duration: 3.2s;
+    animation-delay: 1.4s;
+    animation-iteration-count: infinite;
+}
+
+.animaLetterT {
+    animation-name: letterHide;
+    animation-duration: 3s;
+    animation-delay: 1.6s;
+    animation-iteration-count: infinite;
+}
+
+.animaLetterFo {
+    animation-name: letterHide;
+    animation-duration: 2.8s;
+    animation-delay: 1.8s;
+    animation-iteration-count: infinite;
+}
+
+.animaLetterFi {
+    animation-name: letterHide;
+    animation-duration: 2.6s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+}
+
+.animaLetterSi {
+    animation-name: letterHide;
+    animation-duration: 2.4s;
+    animation-delay: 2.2s;
+    animation-iteration-count: infinite;
+}
+
+.animaLetterSe {
+    animation-name: letterHide;
+    animation-duration: 2.2s;
+    animation-delay: 2.4s;
+    animation-iteration-count: infinite;
+}
+
+.animaLetterE {
+    animation-name: letterHide;
+    animation-duration: 2s;
+    animation-delay: 2.6s;
+    animation-iteration-count: infinite;
+}
+
+.animaLetterN {
+    animation-name: letterHide;
+    animation-duration: 1.8s;
+    animation-delay: 2.8s;
+    animation-iteration-count: infinite;
+}
+
+.animaLetterTe {
+    animation-name: letterHide;
+    animation-duration: 1.6s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+}
+
+.animaLetterEl {
+    animation-name: letterHide;
+    animation-duration: 1.4s;
+    animation-delay: 3.2s;
+    animation-iteration-count: infinite;
+}
+
+.animaLetterTw {
+    animation-name: letterHide;
+    animation-duration: 1.2s;
+    animation-delay: 3.4s;
+    animation-iteration-count: infinite;
+}*/
+
+
+
+
+@keyframes letterHide {
+
+
+
+    25% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes flowerAppear {
+
+    0% {
+        opacity: 1;
+        width: 34px;
+    }
+
+    50% {
+        opacity: 0;
+        width: 0;
+    }
+
+}

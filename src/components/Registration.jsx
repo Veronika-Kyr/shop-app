@@ -52,6 +52,7 @@ export default function Registration(props) {
         window.alert('Your order has registrated. You will receive a confirmation email soon!');
         props.setRegistrationVisibility(false);
         props.setBasketModalVisibilityProp(false);
+        props.setNumberOFgoodsProp(0);
         console.log(formState);
         //  })
         // .catch(error => {

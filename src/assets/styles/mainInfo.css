@@ -1,6 +1,7 @@
 .header-content-head {
     text-align: center;
     font-size: 30px;
+    text-shadow: 2px 2px 5px rgba(184, 239, 133, 0.893);
 }
 
 .header-content-text {
@@ -13,4 +14,25 @@
 .header-content-span {
     color: rgb(9, 89, 44);
     font-weight: 800;
+}
+
+.about-content-text {
+    text-indent: 20px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.about-contet-photo {
+    margin: 5px auto;
+    display: block;
+    border-radius: 6px;
+    width: 250px;
+}
+
+.about-content-photoFrame {
+    margin: 5px auto;
+    padding: 10px;
+    width: 280px;
+    border: 5px solid rgba(184, 239, 133, 0.893);
+    border-radius: 6px;
 }

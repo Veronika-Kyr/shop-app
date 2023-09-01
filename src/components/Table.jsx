@@ -83,7 +83,7 @@ export default function Table() {
                     {BasketModalVisibility && <div className='basketModal'>
                         <button className="closeButton" onClick={() => { setBasketModalVisibility(false) }}>✖</button>
                         <hr />
-                        <BasketModal basket={basket} setBasketModalVisibility={setBasketModalVisibility} />
+                        <BasketModal basket={basket} setBasketModalVisibility={setBasketModalVisibility} setNumberOFgoods={setNumberOFgoods} />
                     </div>}
                 </>
                 <div className='table-content-plants'>
