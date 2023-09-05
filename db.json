@@ -312,5 +312,17 @@
         }
       ]
     }
+  ],
+  "feedbacks": [
+    {
+      "id": "25",
+      "feedback": "The best plant shop ever!",
+      "fullName": "Olena Komar"
+    },
+    {
+      "id": "6VLr6wQ",
+      "fullName": "Anna Grey",
+      "feedback": "My next plant definitely will be bought here!"
+    }
   ]
 }

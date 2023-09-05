@@ -41,25 +41,13 @@ export default function Registration(props) {
             },
             body: JSON.stringify(formState)
         })
-        //  .then((resp) => {
-        //(resp) =>     resp.json();
-        //  .then((data) => {
-        // if (data.error) {
-        // window.alert(data.error);
-        //  setclickedSubBTN(false);
-        //   throw Error();
 
         window.alert('Your order has registrated. You will receive a confirmation email soon!');
         props.setRegistrationVisibility(false);
         props.setBasketModalVisibilityProp(false);
         props.setNumberOFgoodsProp(0);
         console.log(formState);
-        //  })
-        // .catch(error => {
-        //  console.log(error);
-        //  unsubscribeView();
-        //   setclickedSubBTN(false);
-        //   })
+
     }, [clickedSubBTN]);
 
 

@@ -36,6 +36,5 @@ export default function PlantCard(props) {
                 }>🛒</button></div>
         </div>
     )
-
 }
 
