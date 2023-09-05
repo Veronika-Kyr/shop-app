@@ -80,3 +80,19 @@
     cursor: grab;
 
 }
+
+.tableRowContent {
+    cursor: grab;
+}
+
+.plantCard {
+    position: absolute;
+    top: 200px;
+    left: 25%vh;
+    padding: 20px;
+    width: 500px;
+    min-height: 200px;
+    border: 2px solid rgb(9, 89, 44);
+    border-radius: 5px;
+    background: white;
+}

@@ -20,7 +20,7 @@ export default function BasketModal(props) {
             <div className='plantCartContent'>
                 {props.basket.map((cartPlant, index) => {
                     return (
-                        <div className='plantCard' key={index}>
+                        <div className='plantCard-cart' key={index}>
                             <div> <img className='cart-plantPhoto' src={cartPlant.photo} alt='plant' /></div>
                             <div>{cartPlant.plantName}</div>
                             <div>{cartPlant.price} hrn</div>

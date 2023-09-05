@@ -22,3 +22,14 @@
   color: rgb(9, 89, 44);
   letter-spacing: 1px;
 }
+
+h2 {
+  padding: 10px;
+  background: rgb(224, 229, 222);
+}
+
+.header-content-head {
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 2px 2px 5px rgba(184, 239, 133, 0.893);
+}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Pagination from './Pagination';
 import BasketModal from './BasketModal';
 import '../assets/styles/table.css';
+import PlantCard from './PlantCard';
 
 // (cityData.sort((d1, d2) => new Date(d1.datestart) - new Date(d2.datestart)))
 // {cityData.some((cityItem) => cityItem.cityName === props.searchingCity) ? <CityCard cityData={cityData.filter(el => el.cityName === props.searchingCity)} handleEditProp={handleEdit} /> : <CityCard cityData={(cityData.sort((d1, d2) => new Date(d1.datestart) - new Date(d2.datestart))).slice(scrollPosition, 3)} handleEditProp={handleEdit} handleScrollProp={handleScroll} handleScrollLeftProp={handleScrollLeft} error='Error' scrollLeftdisabled={scrollLeftdisabled} scrolldisabled={scrolldisabled} />}</div>}
@@ -20,11 +21,11 @@ export default function Table() {
     const [sortNameClass, setsortNameClass] = useState('sort-plant');
     const [basket, setBasket] = useState([]);
     const [searchingPlant, setSearchingPlant] = useState(null);
-
+    const [plantCardVisibility, setplantCardVisibility] = useState(false);
     const [choosingPlant, setchoosingPlant] = useState({
-        "photo": "",
-        "plantName": "",
-        "price": ""
+        // "photo": "",
+        //  "plantName": "",
+        //"price": ""
     });
 
     useEffect(() => {
@@ -104,7 +105,16 @@ export default function Table() {
                             {(plantdata.slice(indexOfFirstRecord,
                                 indexOfLastRecord)).map((plant, index) => {
                                     return (
-                                        <tr key={index}>
+
+
+                                        // To pick up choosing plant for Plant Card
+
+
+                                        <tr className='tableRowContent' key={index} onClick={() => {
+                                            setplantCardVisibility(true); setchoosingPlant(
+                                                plantdata[plantdata.indexOf(plant)]
+                                            )
+                                        }}>
                                             <td> <img className='table-plantPhoto' src={plant.photo} alt='plant' /> </td>
                                             <td>{plant.plantName}</td>
                                             <td>{plant.sorttName}</td>
@@ -133,6 +143,9 @@ export default function Table() {
                         setCurrentPage={setCurrentPage}
                     />
                 </div>
+                {plantCardVisibility && <div className='plantCard'>
+                    <PlantCard choosingPlant={choosingPlant} setplantCardVisibility={setplantCardVisibility} setNumberOFgoods={setNumberOFgoods} numberOFgoods={numberOFgoods} />
+                </div>}
             </div>
         )
     }

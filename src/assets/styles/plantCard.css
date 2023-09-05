@@ -1,0 +1,56 @@
+.plantOnCard {
+    padding: 4px;
+    width: 200px;
+    border: 2px solid rgb(9, 89, 44);
+    border-radius: 5px;
+}
+
+.plantCardBasket {
+    cursor: grab;
+}
+
+.plantCardMainContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 15px;
+
+}
+
+.plantCardDescription {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    font-size: 18px;
+
+}
+
+.plantCardcloseButton {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+.plantCardBasket {
+    padding: 7px 9px;
+    width: 90px;
+    border: none;
+    border-radius: 3px;
+    background: rgba(184, 239, 133, 0.893);
+    color: rgb(9, 89, 44);
+    font-size: 18px;
+    font-weight: 700;
+    cursor: grab;
+}
+
+.plantCardBuy {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.plantCardDescriptionItem {
+    margin-top: 15px;
+}
