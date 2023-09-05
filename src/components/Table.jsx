@@ -144,7 +144,7 @@ export default function Table() {
                     />
                 </div>
                 {plantCardVisibility && <div className='plantCard'>
-                    <PlantCard choosingPlant={choosingPlant} setplantCardVisibility={setplantCardVisibility} setNumberOFgoods={setNumberOFgoods} numberOFgoods={numberOFgoods} />
+                    <PlantCard choosingPlant={choosingPlant} setplantCardVisibility={setplantCardVisibility} setNumberOFgoods={setNumberOFgoods} numberOFgoods={numberOFgoods} setBasket={setBasket} basket={basket} />
                 </div>}
             </div>
         )

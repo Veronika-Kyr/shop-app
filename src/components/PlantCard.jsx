@@ -23,7 +23,17 @@ export default function PlantCard(props) {
             </div>
             <div className='plantCardBuy'>
                 <div>{props.choosingPlant.price} hrn</div>
-                <button className='plantCardBasket' onClick={() => props.setNumberOFgoods(props.numberOFgoods + 1)} >🛒</button></div>
+                <button className='plantCardBasket' onClick={() => {
+                    props.setNumberOFgoods(props.numberOFgoods + 1)
+                    props.setBasket([...props.basket, {
+                        "id": `${props.choosingPlant.id}`,
+                        "photo": `${props.choosingPlant.photo}`,
+                        "plantName": `${props.choosingPlant.plantName}`,
+                        "sortName": `${props.choosingPlant.sortName}`,
+                        "price": `${props.choosingPlant.price}`
+                    }])
+                }
+                }>🛒</button></div>
         </div>
     )
 
