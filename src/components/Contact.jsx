@@ -82,6 +82,7 @@ export default function Contact() {
 
                             <p className='userFullName'>{feedback.fullName}</p>
                             <div className='textFeedback'> {feedback.feedback}</div>
+                            <hr></hr>
                         </div>
                     )
                 })

@@ -1,0 +1,8 @@
+.consultationBookContent {
+    margin: 25px;
+    padding: 25px;
+    border: 2px solid rgb(9, 89, 44);
+    border-radius: 5px;
+
+    background: rgb(224, 229, 222);
+}

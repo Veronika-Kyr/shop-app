@@ -18,7 +18,7 @@ export default function About() {
             </div>
 
             <p className='about-content-text'>
-                The main impulse of creating my plant shop was dieing of the huge part of my plant collection because of wqr. Some of my partially survived orchids began to give me their orchid kid to continue their living. So, I had pretty big quantity of similar smal plants and they gave the idea of such a shop. A small home-scale plant shop in memory of my beloved plants, my hobby.
+                The main impulse of creating my plant shop was dieing of the huge part of my plant collection because of war. Some of my partially survived orchids began to give me their orchid kids to continue their living. So, I had pretty big quantity of similar small plants and they gave the idea of such a shop. A small home-scale plant shop in memory of my beloved plants, my hobby.
             </p>
         </div>
     )
