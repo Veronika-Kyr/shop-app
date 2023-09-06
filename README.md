@@ -1,8 +1,16 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Pet Project. Online plant shop. 
 
-Currently, two official plugins are available:
+Vite + React. 
+json server to test fetching data
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Functionality:
+
+1. Routing
+2. List of all plants with pagination
+3. Search a plant
+4. Sort plants by price and by name
+5. Add plants to basket from list of all plants and from plant card
+6. Checkout the order
+7. Feedbacks and a form to add a new feedback
+

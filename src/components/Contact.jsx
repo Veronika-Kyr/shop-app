@@ -51,16 +51,29 @@ export default function Contact() {
             <p className='contactText'>We are always happy to receive your feedbacks about our plants and service. We publish every feedback and answer any question you ask. Please, leave a feedback in a form below or contact us in any convenient way. </p>
             <div className='contactFormBlock'>
                 <form onChange={() => { setdisabledBtn(false) }}>
-                    <div className="form-items"> <label htmlFor="fullName"> Full Name </label>
-                        <input id="fullName" type="text" onChange={handleFullName} placeholder='Enter your full name' />
+                    <div className="form-items"> <label className='labelFullname' htmlFor="fullName"> Full Name </label>
+                        <input className='inputFullname' id="fullName" type="text" onChange={handleFullName} placeholder='Enter your full name' />
                     </div>
-                    <div>  <label> <textarea placeholder="Notes" maxLength={200} name="text1" cols="30" rows="10" onChange={handleFeedback}></textarea> </label></div>
-                    <button className="btnS" type="submit" disabled={disabledBtn} onClick={(e) => { e.preventDefault(); setclickedSubBTN(true); }}>Leave the feedback</button>
+                    <div>  <label> <textarea placeholder="Enter your feedback" maxLength={200} name="text1" cols="50" rows="15" onChange={handleFeedback}></textarea> </label></div>
+                    <button className="btnFeedback" type="submit" disabled={disabledBtn} onClick={(e) => { e.preventDefault(); setclickedSubBTN(true); }}>Leave the feedback</button>
                 </form>
                 <div>
-                    <p>Contact us</p>
+                    <p className='headContactLinks'>Contact us:</p>
+                    <div className='contactContent'>
+                        <a rel="noreferrer" className="contactLinks" href="https://www.facebook.com/veronika.kirilovska/"
+                            title="Veronika Kyrylovska on Facebook" target="_blank">Facebook</a>
+                        <a rel="noreferrer"
+                            className="contactLinks" href="https://www.instagram.com/nikakirsimf/"
+                            title="Veronika Kyrylovska on Instagram" target="_blank">
+                            Instagram</a>
+                        <a className="contactLinks" href="mailto:veronika-kirilovska@ukr.net"
+                            title="Send me email">veronika-kirilovska@ukr.net</a>
+                        <a className="contactLinks" href="tel:+380662273840"
+                            title="Call me">+380662273840</a>
+
+                    </div>
                 </div>
-            </div><h3 className='contactFeedbackHeader'> Feedbacks we received from you</h3>
+            </div><h3 className='contactFeedbackHeader'>🌸 Feedbacks we received from you: 🌸</h3>
             <div className='contactFeedback'>
 
                 {feedbacks && feedbacks.map((feedback, index) => {
@@ -68,7 +81,7 @@ export default function Contact() {
                         <div key={index} className='feedbackCard'>
 
                             <p className='userFullName'>{feedback.fullName}</p>
-                            <div> {feedback.feedback}</div>
+                            <div className='textFeedback'> {feedback.feedback}</div>
                         </div>
                     )
                 })
