@@ -3,6 +3,31 @@
     padding: 25px;
     border: 2px solid rgb(9, 89, 44);
     border-radius: 5px;
-
+    font-size: 15px;
     background: rgb(224, 229, 222);
+}
+
+.errorDate {
+    color: red;
+}
+
+.consultationItem {
+    margin: 10px;
+    padding: 8px;
+}
+
+.redBorder {
+    border: 2px solid red;
+    margin: 10px;
+    padding: 8px;
+}
+
+.time {
+    margin: 10px;
+    margin-top: 15px;
+}
+
+.choice {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
