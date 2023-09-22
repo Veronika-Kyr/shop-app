@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, createRef } from 'react';
 import '../assets/styles/consultation.css'
 
 
@@ -12,6 +12,7 @@ export default function Consultation() {
     const [emailclassName, setemailclassName] = useState('consultationItem');
     const [phoneNumberclassName, setphoneNumberclassName] = useState('consultationItem');
     const [clickedSubBTN, setclickedSubBTN] = useState(false);
+    const form = createRef();
     const [consultation, setconsultation] = useState({
         id: "",
         subject: "",
@@ -35,6 +36,22 @@ export default function Consultation() {
             },
             body: JSON.stringify(consultation)
         })
+        setclickedSubBTN(false);
+        window.alert('Thank you! Your consultation is booked. We will send you an invoice to your email address');
+        form.current.reset();
+        setconsultation(
+            {
+                id: "",
+                subject: "",
+                fullName: "",
+                email: "",
+                phoneNumber: "",
+                date: "",
+                time: ""
+            }
+        );
+
+
     }, [clickedSubBTN]);
 
     useEffect(() => {
@@ -62,15 +79,16 @@ export default function Consultation() {
         if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(event.currentTarget.value)) { setemailclassName('redBorder'); }
         else {
             changeState(event.target.value, 'email');
-            setemailclassName('inputEqualWidth');
+            setemailclassName('consultationItem');
         }
     }
+
 
     function handlephoneNumber(event) {
         if (!/^\d+$/.test(event.currentTarget.value)) { setphoneNumberclassName('redBorder'); }
         else {
             changeState(event.currentTarget.value, 'phoneNumber');
-            setphoneNumberclassName('inputEqualWidth');
+            setphoneNumberclassName('consultationItem');
         }
     }
     function handleDate(event) {
@@ -96,7 +114,7 @@ export default function Consultation() {
             <p className='header-content-text'>You may book a personal online consultation here. We will do all our best to help your plants be healthy and bloomy!</p>
             <p className='header-content-text'>Please, keep in mind that periods for consultations are from Monday to Friday, from 1pm to 6pm Kyiv time. A consultation lasts for 45 minutes and could be organized on any platform you like: Google Meet, Zoom, Skype etc. It costs 150hrn. Be advised! No matter you need a less long consultation, its cost remains the same. So, please, fill in the form and we will send you an invoice.</p>
             <div className='consultationBookContent'>
-                <form className='consultationForm' onChange={() => { setdisabledBtn(false) }}>
+                <form className='consultationForm' onSubmit={(e) => e.preventDefault()} onChange={() => { setdisabledBtn(false) }} ref={form}>
                     <div className="form-items"> <label htmlFor="fullname"> Your full name </label>
                         <input id="fullname" className='consultationItem' type="text" onChange={handleFullName} placeholder='Enter a full name' />
                     </div>

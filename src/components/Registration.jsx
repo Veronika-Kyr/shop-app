@@ -18,14 +18,8 @@ export default function Registration(props) {
         email: '',
         phoneNumber: '',
         order: [...props.basket]
-        //  id: '',
-        //  plantName: '',
-        //  sorttName: '',
-        //   price: ''
-
     });
 
-    //  const [cityclassName, setcityclassName] = useState('inputEqualWidth');
     const [firstnameclassName, setfirstnameclassName] = useState('inputEqualWidth');
     const [lastnameclassName, setlastnameclassName] = useState('inputEqualWidth');
     const [emailclassName, setemailclassName] = useState('inputEqualWidth');
@@ -90,13 +84,13 @@ export default function Registration(props) {
     function handleCity(event) {
 
         changeState(event.target.value, 'city');
-        //  setageclassName('inputEqualWidth');
+
 
     }
     function handleDepartment(event) {
 
         changeState(event.target.value, 'department');
-        //     setageclassName('inputEqualWidth');
+
 
     }
 
