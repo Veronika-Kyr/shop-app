@@ -34,7 +34,7 @@ server.listen(process.env.PORT || 5000, () => {
     console.log('JSON Server is running')
 })*/
 
-const jsonServer = require('json-server');
+/*const jsonServer = require('json-server');
 const app = jsonServer.create();
 const path = require('path');
 const express = require('express');
@@ -49,4 +49,17 @@ app.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-app.listen(port);
+app.listen(port);*/
+
+import jsonServer from 'json-server'
+
+const server = jsonServer.create()
+
+const router = jsonServer.router('db.json')
+const middlewares = jsonServer.defaults()
+
+server.use(middlewares)
+server.use(router)
+server.listen(3000, () => {
+    console.log('JSON Server is running')
+})
