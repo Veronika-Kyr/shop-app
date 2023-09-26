@@ -5,8 +5,7 @@
   "type": "module",
   "scripts": {
     "start": "vite",
-    "build": "vite build",
-    "prebuild": "node server.mjs",
+    "build": "concurrently --kill-others \"vite build\" \"node server.mjs\"",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
