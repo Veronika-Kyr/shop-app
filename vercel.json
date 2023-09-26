@@ -1,6 +1,5 @@
 {
     "version": 2,
-    "buildCommand": "vite build",
     "builds": [
         {
             "src": "server.mjs",
@@ -10,6 +9,10 @@
                     "db.json"
                 ]
             }
+        },
+        {
+            "src": "index.html",
+            "use": "@vercel/static"
         }
     ],
     "routes": [
