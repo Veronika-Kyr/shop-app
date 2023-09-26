@@ -16,7 +16,7 @@
         },
         {
             "src": "*.jsx",
-            "use": "@vercel/node"
+            "use": "@vercel/vite"
         }
     ],
     "routes": [
