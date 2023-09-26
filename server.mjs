@@ -52,8 +52,12 @@ app.get('/*', function (req, res) {
 app.listen(port);*/
 
 import jsonServer from 'json-server'
-//import path from 'path';
-//import express from 'express';
+import path from 'path';
+import express from 'express';
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const server = jsonServer.create()
 
 const router = jsonServer.router('db.json')
@@ -61,11 +65,11 @@ const middlewares = jsonServer.defaults()
 
 server.use(middlewares)
 server.use(router)
-/*server.use(express.static(path.join(__dirname, 'build')));
+server.use(express.static(path.join(__dirname, 'build')));
 
 server.get('/*', function (req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});*/
+});
 server.listen(3000, () => {
     console.log('JSON Server is running')
 })
