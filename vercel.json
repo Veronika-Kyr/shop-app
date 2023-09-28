@@ -1,6 +1,6 @@
 {
     "functions": {
-        "server.mjs": {
+        "api/server.mjs": {
             "memory": 1024,
             "includeFiles": "db.json"
         }
