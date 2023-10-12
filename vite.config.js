@@ -6,10 +6,10 @@ import basicSsl from '@vitejs/plugin-basic-ssl'
 export default defineConfig(() => {
   return {
     server: {
-      // open: true,
-      //https: true,
+      open: true,
+      https: true,
       port: 5500,
-      //host: 'localhost'
+      host: 'localhost'
     },
     define: {
       'process.env': {},
