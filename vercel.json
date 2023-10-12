@@ -1,8 +1,0 @@
-{
-    "functions": {
-        "api/server.mjs": {
-            "memory": 1024,
-            "includeFiles": "db.json"
-        }
-    }
-}
