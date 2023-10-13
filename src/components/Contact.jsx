@@ -25,7 +25,7 @@ export default function Contact() {
     }, [clickedSubBTN]);
 
     useEffect(() => {
-        fetch('http://localhost:3000/feedbacks')
+        fetch('/feedbacks')
             .then((resp) => resp.json())
             .then((setFeedbacks))
     }, [feedbacks]);

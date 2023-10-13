@@ -23,13 +23,11 @@ export default function Table() {
     const [searchingPlant, setSearchingPlant] = useState(null);
     const [plantCardVisibility, setplantCardVisibility] = useState(false);
     const [choosingPlant, setchoosingPlant] = useState({
-        // "photo": "",
-        //  "plantName": "",
-        //"price": ""
+
     });
 
     useEffect(() => {
-        fetch('http://localhost:3000/plants')
+        fetch('/plants')
             .then((resp) => resp.json())
             .then((setplantData))
     }, []);

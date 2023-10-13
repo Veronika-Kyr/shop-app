@@ -8,6 +8,7 @@ import Table from './components/Table.jsx';
 import Consultation from './components/Consultation.jsx';
 import Registration from './components/Registration.jsx';
 import App from './App.jsx'
+import server from './server.js';
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -27,4 +28,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </Routes>
 
   </BrowserRouter>,
-)
+);
+
+server();
