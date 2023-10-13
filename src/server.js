@@ -1,24 +1,37 @@
 import { createServer } from "miragejs";
 
+let feedbackContainer = [
+    {
+        "id": "25",
+        "feedback": "The best plant shop ever!",
+        "fullName": "Olena Komar"
+    },
+    {
+        "id": "6VLr6wQ",
+        "fullName": "Anna Grey",
+        "feedback": "My next plant definitely will be bought here!"
+    }
+];
 
 export default function server() {
 
     createServer({
         routes() {
-            this.get("/feedbacks", () => (
-                [{
-                    "id": "25",
-                    "feedback": "The best plant shop ever!",
-                    "fullName": "Olena Komar"
-                },
-                {
-                    "id": "25",
-                    "feedback": "The best plant shop ever!",
-                    "fullName": "Olena Komar"
-                }
-                ]
+            this.get("/feedbacks", () => ({
+
+                feedbacks: feedbackContainer,
+            }
             ), { timing: 1000 }
             )
+
+            this.post("/feedbacks", (schema, request) => {
+                let attrs = JSON.parse(request.requestBody);
+                attrs.id = Math.floor(Math.random() * 100);
+
+                return { feedb: attrs }
+            })
+
+
             this.get("/plants", () => (
                 [
                     {

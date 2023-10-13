@@ -4,9 +4,6 @@ import BasketModal from './BasketModal';
 import '../assets/styles/table.css';
 import PlantCard from './PlantCard';
 
-// (cityData.sort((d1, d2) => new Date(d1.datestart) - new Date(d2.datestart)))
-// {cityData.some((cityItem) => cityItem.cityName === props.searchingCity) ? <CityCard cityData={cityData.filter(el => el.cityName === props.searchingCity)} handleEditProp={handleEdit} /> : <CityCard cityData={(cityData.sort((d1, d2) => new Date(d1.datestart) - new Date(d2.datestart))).slice(scrollPosition, 3)} handleEditProp={handleEdit} handleScrollProp={handleScroll} handleScrollLeftProp={handleScrollLeft} error='Error' scrollLeftdisabled={scrollLeftdisabled} scrolldisabled={scrolldisabled} />}</div>}
-
 
 
 export default function Table() {

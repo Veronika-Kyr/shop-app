@@ -9,26 +9,36 @@ export default function Contact() {
     const [newFeedback, setnewFeedback] = useState({
         id: '',
         fullName: '',
-        feedback: '',
+        feedback: ''
     });
 
     useEffect(() => {
         if (!clickedSubBTN) return;
         setdisabledBtn(true);
-        fetch('http://localhost:3000/feedbacks', {
+        fetch('/feedbacks', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(newFeedback)
         })
+            .then((res) => res.json())
+            .then((json) => {
+                setFeedbacks([...feedbacks, json.feedb])
+            })
+        setnewFeedback({
+            id: '',
+            fullName: '',
+            feedback: ''
+        });
+
     }, [clickedSubBTN]);
 
     useEffect(() => {
         fetch('/feedbacks')
             .then((resp) => resp.json())
-            .then((setFeedbacks))
-    }, [feedbacks]);
+            .then((json) => (setFeedbacks(json.feedbacks)))
+    }, []);
 
     function changeState(value, field) {
         const clone = { ...newFeedback };
