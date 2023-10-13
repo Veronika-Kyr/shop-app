@@ -1,4 +1,5 @@
 import { createServer } from "miragejs";
+import plant1 from "../src/assets/images/plant1.jpg"
 
 let feedbackContainer = [
     {
@@ -36,7 +37,7 @@ export default function server() {
                 [
                     {
                         "id": "1",
-                        "photo": "/assets/images/plant16.jpg",
+                        "photo": `${plant1}`,
                         "plantName": "Orchid",
                         "sorttName": "Black Pearl",
                         "size": "10",
@@ -46,7 +47,7 @@ export default function server() {
                     },
                     {
                         "id": "2",
-                        "photo": "/assets/images/plant10.jpg",
+                        "photo": "./src/assets/images/plant10.jpg",
                         "plantName": "Orchid",
                         "sorttName": "Golden Beauty",
                         "size": "10",
@@ -56,7 +57,7 @@ export default function server() {
                     },
                     {
                         "id": "3",
-                        "photo": "/assets/images/plant7.jpg",
+                        "photo": "./src/assets/images/plant7.jpg",
                         "plantName": "Orchid",
                         "sorttName": "Golden Queen",
                         "size": "30",
@@ -66,7 +67,7 @@ export default function server() {
                     },
                     {
                         "id": "4",
-                        "photo": "/assets/images/plant6.jpg",
+                        "photo": "./src/assets/images/plant6.jpg",
                         "plantName": "Orchid",
                         "sorttName": "Las Vegas",
                         "size": "10",
@@ -76,7 +77,7 @@ export default function server() {
                     },
                     {
                         "id": "5",
-                        "photo": "/assets/images/plant13.jpg",
+                        "photo": "./src/assets/images/plant13.jpg",
                         "plantName": "Orchid",
                         "sorttName": "Yellow splash",
                         "size": "20",
@@ -86,7 +87,7 @@ export default function server() {
                     },
                     {
                         "id": "6",
-                        "photo": "/assets/images/plant19.jpg",
+                        "photo": "./src/assets/images/plant19.jpg",
                         "plantName": "Orchid",
                         "sorttName": "Liodoro",
                         "size": "15",
@@ -96,7 +97,7 @@ export default function server() {
                     },
                     {
                         "id": "7",
-                        "photo": "/assets/images/plant20.jpg",
+                        "photo": "./src/assets/images/plant20.jpg",
                         "plantName": "Orchid",
                         "sorttName": "Biondoro",
                         "size": "10",
@@ -106,7 +107,7 @@ export default function server() {
                     },
                     {
                         "id": "8",
-                        "photo": "/assets/images/plant11.jpg",
+                        "photo": "./src/assets/images/plant11.jpg",
                         "plantName": "Dracena",
                         "sorttName": "GFHGHG",
                         "size": "60",
@@ -116,7 +117,7 @@ export default function server() {
                     },
                     {
                         "id": "9",
-                        "photo": "/assets/images/plant17.jpg",
+                        "photo": "./src/assets/images/plant17.jpg",
                         "plantName": "Dracena",
                         "sorttName": "fdgfggfhg",
                         "size": "45",
@@ -126,7 +127,7 @@ export default function server() {
                     },
                     {
                         "id": "10",
-                        "photo": "/assets/images/plant5.jpg",
+                        "photo": "./src/assets/images/plant5.jpg",
                         "plantName": "Cordilina",
                         "sorttName": "fhggjh",
                         "size": "20",
@@ -136,7 +137,7 @@ export default function server() {
                     },
                     {
                         "id": "11",
-                        "photo": "/assets/images/plant25.jpg",
+                        "photo": "./src/assets/images/plant25.jpg",
                         "plantName": "Violet",
                         "sorttName": "rfrhtfhgfh",
                         "size": "10",
@@ -146,7 +147,7 @@ export default function server() {
                     },
                     {
                         "id": "12",
-                        "photo": "/assets/images/plant8.jpg",
+                        "photo": "./src/assets/images/plant8.jpg",
                         "plantName": "Violet",
                         "sorttName": "dgdfgfhfg",
                         "size": "10",
@@ -156,7 +157,7 @@ export default function server() {
                     },
                     {
                         "id": "13",
-                        "photo": "/assets/images/plant24.jpg",
+                        "photo": "./src/assets/images/plant24.jpg",
                         "plantName": "Violet",
                         "sorttName": "fgjhkhjk",
                         "size": "10",
@@ -166,7 +167,7 @@ export default function server() {
                     },
                     {
                         "id": "14",
-                        "photo": "/assets/images/plant26.jpg",
+                        "photo": "./src/assets/images/plant26.jpg",
                         "plantName": "Violet",
                         "sorttName": "tuyjyu",
                         "size": "10",
@@ -176,7 +177,7 @@ export default function server() {
                     },
                     {
                         "id": "15",
-                        "photo": "/assets/images/plant9.jpg",
+                        "photo": "./src/assets/images/plant9.jpg",
                         "plantName": "Cactus",
                         "sorttName": "ghjhkjhk",
                         "size": "10",
@@ -186,7 +187,7 @@ export default function server() {
                     },
                     {
                         "id": "16",
-                        "photo": "/assets/images/plant13.jpg",
+                        "photo": "./src/assets/images/plant13.jpg",
                         "plantName": "Cactus",
                         "sorttName": "rfgfrgrg",
                         "size": "10",
@@ -196,7 +197,7 @@ export default function server() {
                     },
                     {
                         "id": "17",
-                        "photo": "/assets/images/plant23.jpg",
+                        "photo": "./src/assets/images/plant23.jpg",
                         "plantName": "Zigo cactus",
                         "sorttName": "dfhgfhgjgj",
                         "size": "10",
@@ -206,7 +207,7 @@ export default function server() {
                     },
                     {
                         "id": "18",
-                        "photo": "/assets/images/plant27.jpg",
+                        "photo": "./src/assets/images/plant27.jpg",
                         "plantName": "Zigo cactus",
                         "sorttName": "fghgjhgj",
                         "size": "10",
@@ -216,7 +217,7 @@ export default function server() {
                     },
                     {
                         "id": "19",
-                        "photo": "/assets/images/plant4.jpg",
+                        "photo": "./src/assets/images/plant4.jpg",
                         "plantName": "Zigo cactus",
                         "sorttName": "rhtgjhgj",
                         "size": "10",
@@ -226,7 +227,7 @@ export default function server() {
                     },
                     {
                         "id": "20",
-                        "photo": "/assets/images/plant15.jpg",
+                        "photo": "./src/assets/images/plant15.jpg",
                         "plantName": "Chlorophitum",
                         "sorttName": "gfjhgjghj",
                         "size": "10",
@@ -236,7 +237,7 @@ export default function server() {
                     },
                     {
                         "id": "21",
-                        "photo": "/assets/images/plant3.jpg",
+                        "photo": "./src/assets/images/plant3.jpg",
                         "plantName": "Tradescantia",
                         "sorttName": "ghjhgjh",
                         "size": "10",
@@ -246,7 +247,7 @@ export default function server() {
                     },
                     {
                         "id": "22",
-                        "photo": "/assets/images/plant12.jpg",
+                        "photo": "./src/assets/images/plant12.jpg",
                         "plantName": "Tradescantia",
                         "sorttName": "fjghfdkl",
                         "size": "10",
@@ -256,7 +257,7 @@ export default function server() {
                     },
                     {
                         "id": "23",
-                        "photo": "/assets/images/plant1.jpg",
+                        "photo": "./src/assets/images/plant1.jpg",
                         "plantName": "Eucharis",
                         "sorttName": "fghgfjhgjh",
                         "size": "10",
@@ -266,7 +267,7 @@ export default function server() {
                     },
                     {
                         "id": "24",
-                        "photo": "/assets/images/plant18.jpg",
+                        "photo": "./src/assets/images/plant18.jpg",
                         "plantName": "Monstera",
                         "sorttName": "ghjhjk",
                         "size": "10",
@@ -276,7 +277,7 @@ export default function server() {
                     },
                     {
                         "id": "25",
-                        "photo": "/assets/images/plant22.jpg",
+                        "photo": "./src/assets/images/plant22.jpg",
                         "plantName": "Monstera",
                         "sorttName": "wdwwdwd",
                         "size": "25",
@@ -286,7 +287,7 @@ export default function server() {
                     },
                     {
                         "id": "26",
-                        "photo": "/assets/images/plant21.jpg",
+                        "photo": "./src/assets/images/plant21.jpg",
                         "plantName": "Orchid",
                         "sorttName": "Dendrobium",
                         "size": "10",
@@ -296,7 +297,7 @@ export default function server() {
                     },
                     {
                         "id": "27",
-                        "photo": "/assets/images/plant28.jpg",
+                        "photo": "./src/assets/images/plant28.jpg",
                         "plantName": "Sansevierra",
                         "sorttName": "fhghgh",
                         "size": "100",
