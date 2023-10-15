@@ -69,6 +69,7 @@ export default function Table() {
                                 placeholder="Search for a plant"
                             />
                             <input className="table-search-btn" type="submit" value="🌸 GO 🌸" />
+                            <input className="table-search-glass" type="submit" value="🔎" />
                         </form>
                         <div className='table-sort'>
                             <p className='table-sort'><span onClick={sortPrice} className={sortPriceClass}>By price</span>    <span onClick={sortName} className={sortNameClass}>By name</span></p>
@@ -88,12 +89,12 @@ export default function Table() {
                             <tr>
                                 <th scope='col'>Photo</th>
                                 <th scope='col'>Plant Name</th>
-                                <th scope='col'>Sort/Type Name</th>
-                                <th scope='col'>Size</th>
-                                <th scope='col'>Age</th>
-                                <th scope='col'>Features</th>
+                                <th scope='col'>Sort Name</th>
+                                <th scope='col' className='featureDnone'>Size</th>
+                                <th scope='col' className='featureDnone'>Age</th>
+                                <th scope='col' className='featureDnone'>Features</th>
                                 <th scope='col'>Price in hrn</th>
-                                <th scope='col'>Buy</th>
+                                <th scope='col' className='featureDnone'>Buy</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -113,11 +114,11 @@ export default function Table() {
                                             <td> <img className='table-plantPhoto' src={plant.photo} alt='plant' /> </td>
                                             <td>{plant.plantName}</td>
                                             <td>{plant.sorttName}</td>
-                                            <td>{plant.size}</td>
-                                            <td>{plant.age}</td>
-                                            <td>{plant.features}</td>
+                                            <td className='featureDnone'>{plant.size}</td>
+                                            <td className='featureDnone'>{plant.age}</td>
+                                            <td className='featureDnone'>{plant.features}</td>
                                             <td>{plant.price}</td>
-                                            <td className='tableCart' onClick={() => {
+                                            <td className='tableCart featureDnone' onClick={() => {
                                                 setNumberOFgoods(numberOFgoods + 1);
                                                 setBasket([...basket, {
                                                     "id": `${plant.id}`,

@@ -75,6 +75,9 @@ open {
   text-align: center;
 }
 
+.burgerIcon {
+  color: rgb(9, 89, 44) !important;
+}
 
 @media (max-width: 600px) {
   .main-content-nav {

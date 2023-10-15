@@ -23,7 +23,7 @@ function App() {
       </div>
       <div className='main-content'>
 
-        <button className='burger' title='Menu' onClick={toggleBurger}>🍀</button>
+        <button className='burger' title='Menu' onClick={toggleBurger}><i className="bi bi-list burgerIcon"></i></button>
 
         <div className={isOpen ? 'open' : 'close'}   >
           <Navpanel />

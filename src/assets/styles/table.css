@@ -41,6 +41,10 @@
     cursor: grab;
 }
 
+.table-search-glass {
+    display: none;
+}
+
 .table-search-btn:hover {
     font-size: 16px;
     color: aliceblue;
@@ -95,4 +99,39 @@
     border: 2px solid rgb(9, 89, 44);
     border-radius: 5px;
     background: white;
+}
+
+
+@media (max-width: 600px) {
+
+    .featureDnone {
+        display: none;
+    }
+
+    .table-search-btn {
+        display: none;
+    }
+
+    .table-search-glass {
+        display: inline-block;
+        margin-left: 8px;
+        padding: 5px 8px;
+        border-radius: 3px;
+        border: none;
+        background: rgba(184, 239, 133, 0.893);
+        color: rgb(9, 89, 44);
+        cursor: grab;
+    }
+
+    .table-search-glass:hover {
+        font-size: 16px;
+        color: aliceblue;
+        font-weight: 900;
+    }
+
+    .table-search-input {
+        width: 90px;
+        border-radius: 3px;
+    }
+
 }
