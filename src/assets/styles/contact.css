@@ -109,3 +109,33 @@
     height: 2px;
     width: 800px;
 }
+
+@media (max-width: 600px) {
+    .contactFormBlock {
+        flex-direction: column;
+    }
+
+    .btnFeedback {
+        display: block;
+        margin: 15px auto;
+    }
+
+    .btnFeedback:disabled {
+        margin: 15px auto;
+        display: block;
+    }
+
+    .headContactLinks {
+        margin-top: 10px;
+    }
+
+    .inputFeedback {
+        width: 292px;
+    }
+
+    .textFeedback {
+        min-height: 60px;
+        width: 280px;
+    }
+
+}

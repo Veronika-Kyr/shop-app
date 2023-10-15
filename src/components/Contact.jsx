@@ -64,7 +64,7 @@ export default function Contact() {
                     <div className="form-items"> <label className='labelFullname' htmlFor="fullName"> Full Name </label>
                         <input className='inputFullname' id="fullName" type="text" onChange={handleFullName} placeholder='Enter your full name' />
                     </div>
-                    <div>  <label> <textarea placeholder="Enter your feedback" maxLength={200} name="text1" cols="50" rows="15" onChange={handleFeedback}></textarea> </label></div>
+                    <div>  <label> <textarea className='inputFeedback' placeholder="Enter your feedback" maxLength={200} name="text1" cols="50" rows="15" onChange={handleFeedback}></textarea> </label></div>
                     <button className="btnFeedback" type="submit" disabled={disabledBtn} onClick={(e) => { e.preventDefault(); setclickedSubBTN(true); }}>Leave the feedback</button>
                 </form>
                 <div>
@@ -83,13 +83,13 @@ export default function Contact() {
 
                     </div>
                 </div>
-            </div><h3 className='contactFeedbackHeader'>🌸 Feedbacks we received from you: 🌸</h3>
+            </div>
+            <h3 className='contactFeedbackHeader'>🌸 Feedbacks we received from you: 🌸</h3>
             <div className='contactFeedback'>
 
                 {feedbacks && feedbacks.map((feedback, index) => {
                     return (
                         <div key={index} className='feedbackCard'>
-
                             <p className='userFullName'>{feedback.fullName}</p>
                             <div className='textFeedback'> {feedback.feedback}</div>
                             <hr></hr>

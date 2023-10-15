@@ -11,14 +11,24 @@ import './assets/styles/mainBox.css'
 
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+  function toggleBurger() {
+    setIsOpen(!isOpen);
+  }
 
   return (
-    <>
+    <div className='app'>
       <div className='header'>
         <Header />
       </div>
       <div className='main-content'>
-        <div className='main-content-nav'>
+
+        <button className='burger' title='Menu' onClick={toggleBurger}>🍀</button>
+
+        <div className={isOpen ? 'open' : 'close'}   >
+          <Navpanel />
+        </div>
+        <div className='main-content-nav'   >
           <Navpanel />
         </div>
         <div className='main-content-infobox'>
@@ -29,7 +39,7 @@ function App() {
         <Footer />
       </div>
 
-    </>
+    </div>
   )
 }
 
