@@ -86,14 +86,21 @@ open {
 
   .main-content-infobox {
     width: 100vw;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0px 3px;
+    padding: 20px 15px;
+  }
+
+  .header-content-head {
+    margin: 3px auto;
+    width: 70%;
+    font-size: 25px;
   }
 
   .open {
-    margin: 10px;
+    margin: 7px;
+    padding: 9px;
     margin-top: 0;
-    padding: 15px;
+    margin-left: 3px;
     position: absolute;
     left: 0;
     display: flex;
@@ -112,8 +119,8 @@ open {
   .burger {
     display: block;
     position: absolute;
-    left: 10px;
-    top: 60px;
+    left: 2%;
+    top: 8%;
     z-index: 1;
   }
 }

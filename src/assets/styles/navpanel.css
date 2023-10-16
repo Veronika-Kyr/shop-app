@@ -40,5 +40,21 @@ ul {
     color: white;
     border: 3px solid white;
     border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+    .panel-list {
+        margin-top: 18px;
+        font-size: 22px;
+        line-height: 20px;
+    }
+
+    .panel-list:hover {
+        font-size: 24px;
+    }
+
+    .panel-list .active {
+        font-size: 24px;
+    }
 
 }
